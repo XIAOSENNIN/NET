@@ -1,0 +1,6 @@
+C:\Users\Leviatan\source\repos\guia1\guia1\bin\Debug\guia1.exe
+C:\Users\Leviatan\source\repos\guia1\guia1\bin\Debug\guia1.pdb
+C:\Users\Leviatan\source\repos\guia1\guia1\obj\Debug\guia1.csproj.AssemblyReference.cache
+C:\Users\Leviatan\source\repos\guia1\guia1\obj\Debug\guia1.csproj.CoreCompileInputs.cache
+C:\Users\Leviatan\source\repos\guia1\guia1\obj\Debug\guia1.exe
+C:\Users\Leviatan\source\repos\guia1\guia1\obj\Debug\guia1.pdb

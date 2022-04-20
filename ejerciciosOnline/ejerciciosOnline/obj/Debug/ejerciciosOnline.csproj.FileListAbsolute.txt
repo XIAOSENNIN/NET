@@ -1,0 +1,6 @@
+C:\Users\Leviatan\source\repos\ejerciciosOnline\ejerciciosOnline\bin\Debug\ejerciciosOnline.exe
+C:\Users\Leviatan\source\repos\ejerciciosOnline\ejerciciosOnline\bin\Debug\ejerciciosOnline.pdb
+C:\Users\Leviatan\source\repos\ejerciciosOnline\ejerciciosOnline\obj\Debug\ejerciciosOnline.csproj.AssemblyReference.cache
+C:\Users\Leviatan\source\repos\ejerciciosOnline\ejerciciosOnline\obj\Debug\ejerciciosOnline.csproj.CoreCompileInputs.cache
+C:\Users\Leviatan\source\repos\ejerciciosOnline\ejerciciosOnline\obj\Debug\ejerciciosOnline.exe
+C:\Users\Leviatan\source\repos\ejerciciosOnline\ejerciciosOnline\obj\Debug\ejerciciosOnline.pdb

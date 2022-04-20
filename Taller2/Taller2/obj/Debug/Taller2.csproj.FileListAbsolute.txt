@@ -1,0 +1,6 @@
+C:\Users\Leviatan\source\repos\Taller2\Taller2\bin\Debug\Taller2.exe
+C:\Users\Leviatan\source\repos\Taller2\Taller2\bin\Debug\Taller2.pdb
+C:\Users\Leviatan\source\repos\Taller2\Taller2\obj\Debug\Taller2.csproj.AssemblyReference.cache
+C:\Users\Leviatan\source\repos\Taller2\Taller2\obj\Debug\Taller2.csproj.CoreCompileInputs.cache
+C:\Users\Leviatan\source\repos\Taller2\Taller2\obj\Debug\Taller2.exe
+C:\Users\Leviatan\source\repos\Taller2\Taller2\obj\Debug\Taller2.pdb
