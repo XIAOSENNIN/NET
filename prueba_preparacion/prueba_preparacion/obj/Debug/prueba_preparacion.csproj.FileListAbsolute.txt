@@ -4,3 +4,9 @@ C:\Users\Leviatan\source\repos\prueba_preparacion\prueba_preparacion\obj\Debug\p
 C:\Users\Leviatan\source\repos\prueba_preparacion\prueba_preparacion\obj\Debug\prueba_preparacion.csproj.CoreCompileInputs.cache
 C:\Users\Leviatan\source\repos\prueba_preparacion\prueba_preparacion\obj\Debug\prueba_preparacion.exe
 C:\Users\Leviatan\source\repos\prueba_preparacion\prueba_preparacion\obj\Debug\prueba_preparacion.pdb
+C:\Users\PC1\Downloads\NET-main\NET-main\prueba_preparacion\prueba_preparacion\bin\Debug\prueba_preparacion.exe
+C:\Users\PC1\Downloads\NET-main\NET-main\prueba_preparacion\prueba_preparacion\bin\Debug\prueba_preparacion.pdb
+C:\Users\PC1\Downloads\NET-main\NET-main\prueba_preparacion\prueba_preparacion\obj\Debug\prueba_preparacion.csproj.AssemblyReference.cache
+C:\Users\PC1\Downloads\NET-main\NET-main\prueba_preparacion\prueba_preparacion\obj\Debug\prueba_preparacion.csproj.CoreCompileInputs.cache
+C:\Users\PC1\Downloads\NET-main\NET-main\prueba_preparacion\prueba_preparacion\obj\Debug\prueba_preparacion.exe
+C:\Users\PC1\Downloads\NET-main\NET-main\prueba_preparacion\prueba_preparacion\obj\Debug\prueba_preparacion.pdb

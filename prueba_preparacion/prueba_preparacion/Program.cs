@@ -9,7 +9,7 @@ namespace prueba_preparacion
     {
         static void Main(string[] args)
         {
-            //ejercicio1();
+            ejercicio1();
             ejercicio2();
             Console.ReadKey();
         }
@@ -41,21 +41,6 @@ namespace prueba_preparacion
                 Console.WriteLine("----------------------------------------");
             }
 
-            for (int i = 0; i < cantidad_t; i++)
-            {
-                Console.WriteLine("Nombre Trabajador: " + nombre[i] + "; Rut: " + rut[i] + "; Sueldo: "+sueldo[i]);
-            }
-            foreach (var item in sueldo)
-            {
-                sumasueldo += item;
-            }
-
-            Console.WriteLine("----------------------------------------");
-
-            prom = sumasueldo / cantidad_t;
-
-            Console.WriteLine("Promedio de sueldo de los trabajadores: " + prom);
-            Console.WriteLine("----------------------------------------");
 
             int menor = sueldo[0];
             int mayor = sueldo[0];
@@ -65,8 +50,13 @@ namespace prueba_preparacion
 
             for (int i = 0; i < cantidad_t; i++)
             {
-                Console.WriteLine("Rut: "+rut[i] + " || Nombre: " + nombre[i] + " || Sueldo: " + sueldo[i]);
+                Console.WriteLine("Rut: {0}, Nombre: {1}, Sueldo: {2}", rut[i], nombre[i], sueldo[i]);
 
+               
+                sumasueldo += sueldo[i]; // suma pal promedio//
+
+                /// quien es mayor or menor
+                /// 
                 if (sueldo[i] < menor)
                 {
                     menor = sueldo[i];
@@ -77,7 +67,12 @@ namespace prueba_preparacion
                     mayor = sueldo[i];
                     indicemayor = i;
                 }
+
             }
+            Console.WriteLine("----------------------------------------");
+            prom = sumasueldo / cantidad_t;
+
+            Console.WriteLine("Promedio de sueldo de los trabajadores: " + prom);
             Console.WriteLine("----------------------------------------");
 
             Console.WriteLine("Trabajador con el sueldo mayor: " + nombre[indicemayor] + " " +sueldo[indicemayor]);
@@ -108,29 +103,30 @@ namespace prueba_preparacion
                 {
                     case 1:
                         Console.Write("Ingrese el peso: ");
-                        peso = double.Parse(Console.ReadLine());
+                        fut.Peso = double.Parse(Console.ReadLine());
 
                         Console.Write("Ingrese los minutos: ");
-                        minutos = int.Parse(Console.ReadLine());
+                        fut.Minutos = int.Parse(Console.ReadLine());
 
-                        fut.calcularCalorias(peso, minutos);
-
-
+                        fut.calcularCalorias();
 
                         break;
+
                     case 2:
                         Console.Write("Ingrese el peso: ");
-                        peso = double.Parse(Console.ReadLine());
+                        pelea.Peso = double.Parse(Console.ReadLine());
 
                         Console.Write("Ingrese los minutos: ");
-                        minutos = int.Parse(Console.ReadLine());
+                        pelea.Minutos = int.Parse(Console.ReadLine());
 
-                        pelea.calcularCalorias(peso, minutos);
+                        pelea.calcularCalorias();
 
                         break;
+
                     case 3:
                         salir = true;
                         break;
+
                     default:
                         Console.WriteLine("Escoje una opcion valida");
                         break;
