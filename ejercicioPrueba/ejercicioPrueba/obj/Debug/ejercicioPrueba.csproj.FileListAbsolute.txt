@@ -1,0 +1,6 @@
+C:\Users\Leviatan\source\repos\ejercicioPrueba\ejercicioPrueba\obj\Debug\ejercicioPrueba.csproj.AssemblyReference.cache
+C:\Users\Leviatan\source\repos\ejercicioPrueba\ejercicioPrueba\obj\Debug\ejercicioPrueba.csproj.CoreCompileInputs.cache
+C:\Users\Leviatan\source\repos\ejercicioPrueba\ejercicioPrueba\bin\Debug\ejercicioPrueba.exe
+C:\Users\Leviatan\source\repos\ejercicioPrueba\ejercicioPrueba\bin\Debug\ejercicioPrueba.pdb
+C:\Users\Leviatan\source\repos\ejercicioPrueba\ejercicioPrueba\obj\Debug\ejercicioPrueba.exe
+C:\Users\Leviatan\source\repos\ejercicioPrueba\ejercicioPrueba\obj\Debug\ejercicioPrueba.pdb
