@@ -1,0 +1,12 @@
+C:\Users\PC1\Source\Repos\hola_mundo_wf\hola_mundo_wf\bin\Debug\hola_mundo_wf.exe.config
+C:\Users\PC1\Source\Repos\hola_mundo_wf\hola_mundo_wf\bin\Debug\hola_mundo_wf.exe
+C:\Users\PC1\Source\Repos\hola_mundo_wf\hola_mundo_wf\bin\Debug\hola_mundo_wf.pdb
+C:\Users\PC1\Source\Repos\hola_mundo_wf\hola_mundo_wf\obj\Debug\hola_mundo_wf.csproj.AssemblyReference.cache
+C:\Users\PC1\Source\Repos\hola_mundo_wf\hola_mundo_wf\obj\Debug\hola_mundo_wf.csproj.SuggestedBindingRedirects.cache
+C:\Users\PC1\Source\Repos\hola_mundo_wf\hola_mundo_wf\obj\Debug\hola_mundo_wf.Form1.resources
+C:\Users\PC1\Source\Repos\hola_mundo_wf\hola_mundo_wf\obj\Debug\hola_mundo_wf.Properties.Resources.resources
+C:\Users\PC1\Source\Repos\hola_mundo_wf\hola_mundo_wf\obj\Debug\hola_mundo_wf.csproj.GenerateResource.cache
+C:\Users\PC1\Source\Repos\hola_mundo_wf\hola_mundo_wf\obj\Debug\hola_mundo_wf.csproj.CoreCompileInputs.cache
+C:\Users\PC1\Source\Repos\hola_mundo_wf\hola_mundo_wf\obj\Debug\hola_mundo_wf.exe
+C:\Users\PC1\Source\Repos\hola_mundo_wf\hola_mundo_wf\obj\Debug\hola_mundo_wf.pdb
+C:\Users\PC1\Source\Repos\hola_mundo_wf\hola_mundo_wf\obj\Debug\hola_mundo_wf.Form_Operaciones.resources
