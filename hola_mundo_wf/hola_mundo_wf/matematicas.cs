@@ -28,4 +28,16 @@ namespace hola_mundo_wf
         }
 
     }
+
+    class operaciones
+    {
+        public double Multi(double a, double b)
+        {
+            return a * b;
+        }
+        public double Div(double a, double b)
+        {
+            return a / b;
+        }
+    }
 }

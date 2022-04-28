@@ -10,3 +10,4 @@ C:\Users\PC1\Source\Repos\hola_mundo_wf\hola_mundo_wf\obj\Debug\hola_mundo_wf.cs
 C:\Users\PC1\Source\Repos\hola_mundo_wf\hola_mundo_wf\obj\Debug\hola_mundo_wf.exe
 C:\Users\PC1\Source\Repos\hola_mundo_wf\hola_mundo_wf\obj\Debug\hola_mundo_wf.pdb
 C:\Users\PC1\Source\Repos\hola_mundo_wf\hola_mundo_wf\obj\Debug\hola_mundo_wf.Form_Operaciones.resources
+C:\Users\PC1\Source\Repos\hola_mundo_wf\hola_mundo_wf\obj\Debug\hola_mundo_wf.Form_Resultado.resources

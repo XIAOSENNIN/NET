@@ -19,31 +19,43 @@ namespace hola_mundo_wf
 
         private void button1_Res_Click(object sender, EventArgs e)
         {
-            double op1 = double.Parse(txt_op1.Text);
-            double op2 = double.Parse(txt_op2.Text);
-
-            double res = 0;
-
-            if (rbtn_sumar.Checked == true)
+            if (txt_op1.Text != "" && txt_op2.Text != "") 
             {
-                res = matematicas.Sumar(op1, op2);
- 
-            }
-            else if (rbtn_resta.Checked == true)
-            {
-                res = matematicas.Resta(op1, op2);
-            }
-            else if (rbtn_mult.Checked == true)
-            {
-                res = matematicas.Multi(op1, op2);
-            }
-            else if (rbtn_div.Checked == true)
-            {
-                res = matematicas.Div(op1, op2);
-            }
+                double op1 = double.Parse(txt_op1.Text);
+                double op2 = double.Parse(txt_op2.Text);
 
-            MessageBox.Show("EL resultado es: " + res);
+                operaciones oper = new operaciones();
 
+                double res = 0;
+
+                if (rbtn_sumar.Checked == true)
+                {
+                    res = matematicas.Sumar(op1, op2);
+
+                }
+                else if (rbtn_resta.Checked == true)
+                {
+                    res = matematicas.Resta(op1, op2);
+                }
+                else if (rbtn_mult.Checked == true)
+                {
+                    res = oper.Multi(op1, op2);
+                }
+                else if (rbtn_div.Checked == true)
+                {
+                    res = oper.Div(op1, op2);
+                }
+
+                //MessageBox.Show("EL resultado es: " + res);
+                Form_Resultado fr = new Form_Resultado();
+                fr.resultado = res;
+                fr.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Debe ingresar los datos correspondientes");
+            }
         }
 
 
