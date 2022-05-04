@@ -1,0 +1,23 @@
+C:\Users\PC1\Desktop\Nueva carpeta\EJERCICIO 30-04\EJERCICIO 30-04\bin\Debug\EJERCICIO 30-04.exe.config
+C:\Users\PC1\Desktop\Nueva carpeta\EJERCICIO 30-04\EJERCICIO 30-04\bin\Debug\EJERCICIO 30-04.exe
+C:\Users\PC1\Desktop\Nueva carpeta\EJERCICIO 30-04\EJERCICIO 30-04\bin\Debug\EJERCICIO 30-04.pdb
+C:\Users\PC1\Desktop\Nueva carpeta\EJERCICIO 30-04\EJERCICIO 30-04\obj\Debug\EJERCICIO 30-04.csproj.AssemblyReference.cache
+C:\Users\PC1\Desktop\Nueva carpeta\EJERCICIO 30-04\EJERCICIO 30-04\obj\Debug\EJERCICIO 30-04.csproj.SuggestedBindingRedirects.cache
+C:\Users\PC1\Desktop\Nueva carpeta\EJERCICIO 30-04\EJERCICIO 30-04\obj\Debug\EJERCICIO_30_04.Form1.resources
+C:\Users\PC1\Desktop\Nueva carpeta\EJERCICIO 30-04\EJERCICIO 30-04\obj\Debug\EJERCICIO_30_04.Properties.Resources.resources
+C:\Users\PC1\Desktop\Nueva carpeta\EJERCICIO 30-04\EJERCICIO 30-04\obj\Debug\EJERCICIO 30-04.csproj.GenerateResource.cache
+C:\Users\PC1\Desktop\Nueva carpeta\EJERCICIO 30-04\EJERCICIO 30-04\obj\Debug\EJERCICIO 30-04.csproj.CoreCompileInputs.cache
+C:\Users\PC1\Desktop\Nueva carpeta\EJERCICIO 30-04\EJERCICIO 30-04\obj\Debug\EJERCICIO 30-04.exe
+C:\Users\PC1\Desktop\Nueva carpeta\EJERCICIO 30-04\EJERCICIO 30-04\obj\Debug\EJERCICIO 30-04.pdb
+C:\Users\PC1\Desktop\EJERCICIO 30-04\EJERCICIO 30-04\bin\Debug\EJERCICIO 30-04.exe.config
+C:\Users\PC1\Desktop\EJERCICIO 30-04\EJERCICIO 30-04\bin\Debug\EJERCICIO 30-04.exe
+C:\Users\PC1\Desktop\EJERCICIO 30-04\EJERCICIO 30-04\bin\Debug\EJERCICIO 30-04.pdb
+C:\Users\PC1\Desktop\EJERCICIO 30-04\EJERCICIO 30-04\obj\Debug\EJERCICIO 30-04.csproj.AssemblyReference.cache
+C:\Users\PC1\Desktop\EJERCICIO 30-04\EJERCICIO 30-04\obj\Debug\EJERCICIO 30-04.csproj.SuggestedBindingRedirects.cache
+C:\Users\PC1\Desktop\EJERCICIO 30-04\EJERCICIO 30-04\obj\Debug\EJERCICIO_30_04.Form1.resources
+C:\Users\PC1\Desktop\EJERCICIO 30-04\EJERCICIO 30-04\obj\Debug\EJERCICIO_30_04.Form_Mostrar.resources
+C:\Users\PC1\Desktop\EJERCICIO 30-04\EJERCICIO 30-04\obj\Debug\EJERCICIO_30_04.Properties.Resources.resources
+C:\Users\PC1\Desktop\EJERCICIO 30-04\EJERCICIO 30-04\obj\Debug\EJERCICIO 30-04.csproj.GenerateResource.cache
+C:\Users\PC1\Desktop\EJERCICIO 30-04\EJERCICIO 30-04\obj\Debug\EJERCICIO 30-04.csproj.CoreCompileInputs.cache
+C:\Users\PC1\Desktop\EJERCICIO 30-04\EJERCICIO 30-04\obj\Debug\EJERCICIO 30-04.exe
+C:\Users\PC1\Desktop\EJERCICIO 30-04\EJERCICIO 30-04\obj\Debug\EJERCICIO 30-04.pdb
