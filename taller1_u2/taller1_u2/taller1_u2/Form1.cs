@@ -21,65 +21,69 @@ namespace taller1_u2
             string rut = txt_rut.Text;
             string rut_digito = txt_rutdigito.Text;
             string montotext = txt_monto.Text;
-
-            double interes = 0;
-            double cuotaInteres = 0;
-
-            double cuotaSinInteres = 0;
-            int mes = 0;
-
-            if (rut != "" && rut_digito != "" && montotext != "" && ( chb_desgravamen.Checked == true || chb_terremoto.Checked == true || chb_incendio.Checked == true))
+            
+            if (rut != "" && rut_digito != "" && montotext != "" && cb_plazo.Text != "")
             {
-                double monto = double.Parse(montotext);
-
-                if (rut_digito.Length<=1)
+                if (chb_desgravamen.Checked == true || chb_terremoto.Checked == true || chb_incendio.Checked == true)
                 {
-                    if (cb_plazo.Text != "")
+                    int mes = 0;
+                    double monto = double.Parse(montotext);
+
+                    switch (cb_plazo.Text)
                     {
-                        if (rut_digito.Length < 7 && rut_digito.Length > 9)
-                        {
-                            MessageBox.Show("Ingrese un RUT valido.", "Error");
-                        }
-                        else
-                        {
-                            if (cb_plazo.Text == "12 meses")
-                            {
-                                mes = 12;
-                            }
-                            cuotaSinInteres = monto / mes;
-
-                            interes = (monto * 1.68) / 100;
-                            cuotaInteres = cuotaSinInteres + interes;
-
-                            if (chb_desgravamen.Checked || chb_terremoto.Checked)
-                            {
-                                cuotaInteres = cuotaInteres + (cuotaInteres * 0.0056) / 100;
-                            }
-                            else
-                            {
-                                cuotaInteres = cuotaInteres + (cuotaInteres * 0.0088) / 100;
-                            }
-
-                            double total = (cuotaInteres * mes);
-
-                            Form_Simulacion miform = new Form_Simulacion();
-
-
-                            miform.mensaje = $"RUT: {rut}\n Monto solicitado: {montotext}\n Plazo: {cb_plazo.Text}\n Valor cuota: {cuotaInteres}\n Monto total: {total}";
-
-                            miform.Show();
-                        }
-                        
+                        case "12 meses":
+                            mes = 12;
+                            break;
+                        case "24 meses":
+                            mes = 24;
+                            break;
+                        case "36 meses":
+                            mes = 36;
+                            break;
+                        case "48 meses":
+                            mes = 48;
+                            break;
+                        case "60 meses":
+                            mes = 60;
+                            break;
+                        default:
+                            break;
                     }
-                    else
+
+                    double cuotaSinInteres = monto / mes;
+                    double interes = monto * 0.0168;
+                    double cuotaInteres = cuotaSinInteres + interes;
+
+                    if (chb_desgravamen.Checked == true)
                     {
-                        MessageBox.Show("Ingrese un plazo de tiempo.", "Error");
+                        cuotaInteres += monto * 0.00056;
                     }
+                    if (chb_desgravamen.Checked == true)
+                    {
+                        cuotaInteres += monto * 0.00056;
+                    }
+                    if (chb_incendio.Checked == true)
+                    {
+                        cuotaInteres += monto * 0.00088;
+                    }
+                    Form_Simulacion resultado = new Form_Simulacion();
+                    resultado.rut = rut;
+                    resultado.dv = rut_digito;
+                    resultado.monto = monto;
+                    resultado.plazo = cb_plazo.Text;
+                    resultado.cuota = cuotaInteres;
+                    resultado.total = cuotaInteres * mes;
+
+                    resultado.Show();
                 }
                 else
                 {
-                    MessageBox.Show("Ingrese un verificador valido.", "Error");
+                    MessageBox.Show("Debe seleccionar un seguro para continuar");
                 }
+            }
+            else
+            {
+                MessageBox.Show("Debe ingresar todos los datos para simular");
             }
         }
 

@@ -21,7 +21,7 @@ namespace taller1_u2
         }
         public int solo_numeros_k(char caracter)
         {
-            string Caracteres_Aceptados = "0123456789kK" + (char)8 + (char)13;
+            string Caracteres_Aceptados = "0123456789" + (char)8 + (char)13 + (char)75 + (char)107;
             if (Caracteres_Aceptados.IndexOf(caracter) == -1)
             {
                 return 0;

@@ -75,10 +75,9 @@
             // txt_rut
             // 
             this.txt_rut.Location = new System.Drawing.Point(110, 59);
-            this.txt_rut.MaxLength = 8;
             this.txt_rut.Name = "txt_rut";
             this.txt_rut.Size = new System.Drawing.Size(120, 20);
-            this.txt_rut.TabIndex = 1;
+            this.txt_rut.TabIndex = 3;
             this.txt_rut.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_rut_KeyPress);
             // 
             // txt_monto
@@ -86,7 +85,7 @@
             this.txt_monto.Location = new System.Drawing.Point(110, 95);
             this.txt_monto.Name = "txt_monto";
             this.txt_monto.Size = new System.Drawing.Size(120, 20);
-            this.txt_monto.TabIndex = 2;
+            this.txt_monto.TabIndex = 4;
             this.txt_monto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_monto_KeyPress);
             // 
             // cb_plazo
@@ -101,15 +100,14 @@
             this.cb_plazo.Location = new System.Drawing.Point(109, 131);
             this.cb_plazo.Name = "cb_plazo";
             this.cb_plazo.Size = new System.Drawing.Size(121, 21);
-            this.cb_plazo.TabIndex = 4;
+            this.cb_plazo.TabIndex = 5;
             // 
             // txt_rutdigito
             // 
             this.txt_rutdigito.Location = new System.Drawing.Point(257, 59);
-            this.txt_rutdigito.MaxLength = 1;
             this.txt_rutdigito.Name = "txt_rutdigito";
             this.txt_rutdigito.Size = new System.Drawing.Size(32, 20);
-            this.txt_rutdigito.TabIndex = 2;
+            this.txt_rutdigito.TabIndex = 6;
             this.txt_rutdigito.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_rutdigito_KeyPress);
             // 
             // label4
@@ -128,7 +126,7 @@
             this.chb_desgravamen.Location = new System.Drawing.Point(347, 61);
             this.chb_desgravamen.Name = "chb_desgravamen";
             this.chb_desgravamen.Size = new System.Drawing.Size(127, 17);
-            this.chb_desgravamen.TabIndex = 5;
+            this.chb_desgravamen.TabIndex = 8;
             this.chb_desgravamen.Text = "Seguro desgravamen";
             this.chb_desgravamen.UseVisualStyleBackColor = true;
             // 
@@ -138,7 +136,7 @@
             this.chb_incendio.Location = new System.Drawing.Point(347, 95);
             this.chb_incendio.Name = "chb_incendio";
             this.chb_incendio.Size = new System.Drawing.Size(103, 17);
-            this.chb_incendio.TabIndex = 6;
+            this.chb_incendio.TabIndex = 9;
             this.chb_incendio.Text = "Seguro incendio";
             this.chb_incendio.UseVisualStyleBackColor = true;
             // 
@@ -148,7 +146,7 @@
             this.chb_terremoto.Location = new System.Drawing.Point(347, 130);
             this.chb_terremoto.Name = "chb_terremoto";
             this.chb_terremoto.Size = new System.Drawing.Size(107, 17);
-            this.chb_terremoto.TabIndex = 7;
+            this.chb_terremoto.TabIndex = 10;
             this.chb_terremoto.Text = "Seguro terremoto";
             this.chb_terremoto.UseVisualStyleBackColor = true;
             // 

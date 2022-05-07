@@ -33,17 +33,17 @@
             // 
             // lbl_res
             // 
-            this.lbl_res.Location = new System.Drawing.Point(7, 9);
+            this.lbl_res.Location = new System.Drawing.Point(5, 37);
             this.lbl_res.Name = "lbl_res";
-            this.lbl_res.Size = new System.Drawing.Size(182, 189);
+            this.lbl_res.Size = new System.Drawing.Size(361, 367);
             this.lbl_res.TabIndex = 0;
-            this.lbl_res.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_res.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form_Simulacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(201, 203);
+            this.ClientSize = new System.Drawing.Size(378, 413);
             this.Controls.Add(this.lbl_res);
             this.Name = "Form_Simulacion";
             this.Text = "Form_Simulacion";
