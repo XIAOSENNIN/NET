@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProgModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Alumno">
+    <Key>
+      <PropertyRef Name="rut" />
+    </Key>
+    <Property Name="rut" Type="String" MaxLength="9" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ap_paterno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ap_materno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="genero" Type="Int32" Nullable="false" />
+    <Property Name="direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ciudad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Ciudad1" Relationship="Self.FK_Alumno_Ciudad" FromRole="Alumno" ToRole="Ciudad" />
+    <NavigationProperty Name="Genero1" Relationship="Self.FK_Alumno_Genero" FromRole="Alumno" ToRole="Genero" />
+  </EntityType>
+  <EntityType Name="Ciudad">
+    <Key>
+      <PropertyRef Name="id_ciudad" />
+    </Key>
+    <Property Name="id_ciudad" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="region" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Alumno" Relationship="Self.FK_Alumno_Ciudad" FromRole="Ciudad" ToRole="Alumno" />
+    <NavigationProperty Name="Region1" Relationship="Self.FK_Ciudad_Region" FromRole="Ciudad" ToRole="Region" />
+  </EntityType>
+  <EntityType Name="Genero">
+    <Key>
+      <PropertyRef Name="id_genero" />
+    </Key>
+    <Property Name="id_genero" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Alumno" Relationship="Self.FK_Alumno_Genero" FromRole="Genero" ToRole="Alumno" />
+  </EntityType>
+  <EntityType Name="Region">
+    <Key>
+      <PropertyRef Name="id_region" />
+    </Key>
+    <Property Name="id_region" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Ciudad" Relationship="Self.FK_Ciudad_Region" FromRole="Region" ToRole="Ciudad" />
+  </EntityType>
+  <Association Name="FK_Alumno_Ciudad">
+    <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="1" />
+    <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="id_ciudad" />
+      </Principal>
+      <Dependent Role="Alumno">
+        <PropertyRef Name="ciudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Alumno_Genero">
+    <End Role="Genero" Type="Self.Genero" Multiplicity="1" />
+    <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genero">
+        <PropertyRef Name="id_genero" />
+      </Principal>
+      <Dependent Role="Alumno">
+        <PropertyRef Name="genero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ciudad_Region">
+    <End Role="Region" Type="Self.Region" Multiplicity="1" />
+    <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Region">
+        <PropertyRef Name="id_region" />
+      </Principal>
+      <Dependent Role="Ciudad">
+        <PropertyRef Name="region" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ProgEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Alumno" EntityType="Self.Alumno" />
+    <EntitySet Name="Ciudad" EntityType="Self.Ciudad" />
+    <EntitySet Name="Genero" EntityType="Self.Genero" />
+    <EntitySet Name="Region" EntityType="Self.Region" />
+    <AssociationSet Name="FK_Alumno_Ciudad" Association="Self.FK_Alumno_Ciudad">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="Alumno" EntitySet="Alumno" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Alumno_Genero" Association="Self.FK_Alumno_Genero">
+      <End Role="Genero" EntitySet="Genero" />
+      <End Role="Alumno" EntitySet="Alumno" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ciudad_Region" Association="Self.FK_Ciudad_Region">
+      <End Role="Region" EntitySet="Region" />
+      <End Role="Ciudad" EntitySet="Ciudad" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,16 @@
+C:\Users\PC1\Source\Repos\Linq_Test\Linq_Test\bin\Debug\Linq_Test.exe.config
+C:\Users\PC1\Source\Repos\Linq_Test\Linq_Test\bin\Debug\Linq_Test.exe
+C:\Users\PC1\Source\Repos\Linq_Test\Linq_Test\bin\Debug\Linq_Test.pdb
+C:\Users\PC1\Source\Repos\Linq_Test\Linq_Test\bin\Debug\EntityFramework.dll
+C:\Users\PC1\Source\Repos\Linq_Test\Linq_Test\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PC1\Source\Repos\Linq_Test\Linq_Test\bin\Debug\EntityFramework.xml
+C:\Users\PC1\Source\Repos\Linq_Test\Linq_Test\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PC1\Source\Repos\Linq_Test\Linq_Test\obj\Debug\Linq_Test.csproj.AssemblyReference.cache
+C:\Users\PC1\Source\Repos\Linq_Test\Linq_Test\obj\Debug\Linq_Test.csproj.SuggestedBindingRedirects.cache
+C:\Users\PC1\Source\Repos\Linq_Test\Linq_Test\obj\Debug\Linq_Test.Form1.resources
+C:\Users\PC1\Source\Repos\Linq_Test\Linq_Test\obj\Debug\Linq_Test.Properties.Resources.resources
+C:\Users\PC1\Source\Repos\Linq_Test\Linq_Test\obj\Debug\Linq_Test.csproj.GenerateResource.cache
+C:\Users\PC1\Source\Repos\Linq_Test\Linq_Test\obj\Debug\Linq_Test.csproj.CoreCompileInputs.cache
+C:\Users\PC1\Source\Repos\Linq_Test\Linq_Test\obj\Debug\Linq_Test.csproj.CopyComplete
+C:\Users\PC1\Source\Repos\Linq_Test\Linq_Test\obj\Debug\Linq_Test.exe
+C:\Users\PC1\Source\Repos\Linq_Test\Linq_Test\obj\Debug\Linq_Test.pdb
