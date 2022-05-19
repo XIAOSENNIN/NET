@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProgCModelStoreContainer" CdmEntityContainer="ProgCEntities">
+    <EntitySetMapping Name="Automovil">
+      <EntityTypeMapping TypeName="ProgCModel.Automovil">
+        <MappingFragment StoreEntitySet="Automovil">
+          <ScalarProperty Name="patente" ColumnName="patente" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

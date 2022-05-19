@@ -1,0 +1,14 @@
+C:\Users\PC1\Source\Repos\BD_test\BD_test\bin\Debug\BD_test.exe.config
+C:\Users\PC1\Source\Repos\BD_test\BD_test\bin\Debug\BD_test.exe
+C:\Users\PC1\Source\Repos\BD_test\BD_test\bin\Debug\BD_test.pdb
+C:\Users\PC1\Source\Repos\BD_test\BD_test\bin\Debug\EntityFramework.dll
+C:\Users\PC1\Source\Repos\BD_test\BD_test\bin\Debug\EntityFramework.xml
+C:\Users\PC1\Source\Repos\BD_test\BD_test\obj\Debug\BD_test.csproj.AssemblyReference.cache
+C:\Users\PC1\Source\Repos\BD_test\BD_test\obj\Debug\BD_test.csproj.SuggestedBindingRedirects.cache
+C:\Users\PC1\Source\Repos\BD_test\BD_test\obj\Debug\BD_test.Form1.resources
+C:\Users\PC1\Source\Repos\BD_test\BD_test\obj\Debug\BD_test.Properties.Resources.resources
+C:\Users\PC1\Source\Repos\BD_test\BD_test\obj\Debug\BD_test.csproj.GenerateResource.cache
+C:\Users\PC1\Source\Repos\BD_test\BD_test\obj\Debug\BD_test.csproj.CoreCompileInputs.cache
+C:\Users\PC1\Source\Repos\BD_test\BD_test\obj\Debug\BD_test.csproj.CopyComplete
+C:\Users\PC1\Source\Repos\BD_test\BD_test\obj\Debug\BD_test.exe
+C:\Users\PC1\Source\Repos\BD_test\BD_test\obj\Debug\BD_test.pdb
