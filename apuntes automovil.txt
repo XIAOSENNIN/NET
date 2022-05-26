@@ -1,0 +1,135 @@
+ private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            if (txt_patente.Text != "" && cb_marca.Text != "" && txt_modelo.Text != "") // VALIDAMOS QUE LOS CAJONES NO ESTEN VACIOS 
+            {
+                Automovil miAuto = new Automovil(); // INSTANCIAMOS LA CLASE AUTOMOVIL PARA ASIGNARLES LOS VALORES DE LOS CAJONES DE TEXTO
+                miAuto.Patente = txt_patente.Text;
+                miAuto.Marca = int.Parse(cb_marca.SelectedValue.ToString());
+                miAuto.Modelo = txt_modelo.Text;
+
+                ProgAEntities bd = new ProgAEntities(); //
+                bd.Automovil.Add(miAuto);
+                bd.SaveChanges();
+                MostrarDatos(); // PARA VER LOS DATOS ACTUALIZADOS EN EL DATAGRIDVIEW
+
+                txt_patente.Clear();
+                cb_marca.SelectedIndex = -1;  // PARA QUE NO APAREZCA NINGUNA MARCA SELECCIONADA
+                txt_modelo.Clear();
+
+                MessageBox.Show("Los datos han sido guardado correctamente",
+                    "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Debe ingresar todos los datos para guardar",
+                    "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+
+//// QUE ME CARGUE LOS DATOS AL DAR INICIO
+
+private void Form1_Load(object sender, EventArgs e)
+        {
+            Llenar_Marcas();
+            MostrarDatos();
+        }
+
+        private void Llenar_Marcas()  // PARA LLENAR LOS COMBOBOX
+        {
+            ProgAEntities bd = new ProgAEntities();
+
+            cb_marca.DataSource = bd.Marca.ToList();
+            cb_marca.ValueMember = "ID_Marca";
+            cb_marca.DisplayMember = "Descripcion";
+            cb_marca.SelectedIndex = -1;
+        }
+
+        private void MostrarDatos() 
+
+        {
+            ProgAEntities bd = new ProgAEntities();
+
+            var miConsulta = from miItem in bd.Automovil
+                             select new
+                             {
+                                 Patente = miItem.Patente,
+                                 Marca = miItem.Marca1.Descripcion,
+                                 Modelo = miItem.Modelo,
+                             };
+
+
+
+            dataGridView1.DataSource = miConsulta.ToList();
+            dataGridView1.Refresh();
+        }
+
+// AL DAR CLICK AL LADO DE LA FILA ME LLENA TODOS LOS DATOS EN LOS CAJONES DE TEXTO
+
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewRow Fila = dataGridView1.Rows[e.RowIndex];
+            txt_patente.Text = Fila.Cells[0].Value.ToString();
+            cb_marca.Text = Fila.Cells[1].Value.ToString();
+            txt_modelo.Text = Fila.Cells[2].Value.ToString();
+
+            txt_patente.Enabled = false;  // para no editar la patente al seleccionar una fila
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            ProgAEntities bd = new ProgAEntities();
+
+            var miConsulta = bd.Automovil.Find(txt_patente.Text);
+
+            if (miConsulta != null)
+            {
+                bd.Automovil.Remove(miConsulta);
+                bd.SaveChanges();
+                MostrarDatos();
+
+                txt_patente.Clear();
+                cb_marca.SelectedIndex = -1;
+                txt_modelo.Clear();
+                txt_patente.Enabled = true;
+
+                MessageBox.Show("Los datos han sido eliminados correctamente",
+                    "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar una fila para eliminar",
+                    "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        
+        }
+
+        private void btn_editar_Click(object sender, EventArgs e)
+        {
+            ProgAEntities bd = new ProgAEntities();
+
+            var miConsulta = bd.Automovil.Find(txt_patente.Text);
+
+            if (miConsulta != null)
+            {
+               
+                miConsulta.Marca = int.Parse(cb_marca.SelectedValue.ToString());
+                miConsulta.Modelo = txt_modelo.Text;
+                bd.SaveChanges();
+
+                MostrarDatos();
+
+                txt_patente.Clear();
+                cb_marca.SelectedIndex = -1;
+                txt_modelo.Clear();
+                txt_patente.Enabled = true;
+
+                MessageBox.Show("Los datos han sido editados correctamente",
+                    "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar una fila para editar",
+                    "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
