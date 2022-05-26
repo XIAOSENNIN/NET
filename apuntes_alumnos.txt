@@ -1,0 +1,223 @@
+ private void btn_consulta1_Click(object sender, EventArgs e)
+        {
+            ProgCEntities bd = new ProgCEntities();
+
+            var query = from alumno in bd.Alumno
+                        select new
+                        {
+                            alumno.Ap_Paterno,
+                            alumno.Ap_Materno,
+                            alumno.Nombres
+                        };
+            dataGridView1.DataSource = query.ToList();
+            dataGridView1.Refresh();
+        }
+
+        private void btn_consulta2_Click(object sender, EventArgs e)
+        {
+            ProgCEntities bd = new ProgCEntities();
+
+            var query = from alumno in bd.Alumno
+                        where alumno.Ciudad1.Descripcion == "Talca"  ///Hace referencia a todas las personas que son de talca
+                        select new
+                        {
+                            Ciudad = alumno.Ciudad1.Descripcion,
+                            Rut = alumno.Rut,
+                            Nombre = alumno.Nombres,
+                            Apellido_Paterno = alumno.Ap_Paterno,
+                            Apellido_Materno = alumno.Ap_Materno,
+                            Genero = alumno.Genero1.Descripcion
+                        };
+
+
+            dataGridView1.DataSource = query.ToList();
+            dataGridView1.Refresh();
+        }
+
+        private void btn_consulta3_Click(object sender, EventArgs e)
+        {
+            ProgCEntities bd = new ProgCEntities();
+
+            var query = from alumno in bd.Alumno
+                        where alumno.Ciudad1.Region1.Descripcion == "Region del Maule" ///Hace referencia a todas las personas que son de la region del maule
+                        select new
+                        {
+
+                            Rut = alumno.Rut,
+                            Nombre = alumno.Nombres,
+                            Apellido_Paterno = alumno.Ap_Paterno,
+                            Apellido_Materno = alumno.Ap_Materno,
+                            Genero = alumno.Genero1.Descripcion,
+                            Region = alumno.Ciudad1.Region1.Descripcion,
+                            Ciudad = alumno.Ciudad1.Descripcion
+                        };
+
+
+            dataGridView1.DataSource = query.ToList();
+            dataGridView1.Refresh();
+        }
+
+        private void btn_consulta4_Click(object sender, EventArgs e)
+        {
+            ProgCEntities bd = new ProgCEntities();
+
+            var query = from alumno in bd.Alumno
+                        where alumno.Ciudad1.Descripcion == "Curico"
+                        orderby alumno.Rut descending
+                        select new
+                        {
+
+                            Rut = alumno.Rut,
+                            Nombre = alumno.Nombres,
+                            Apellido_Paterno = alumno.Ap_Paterno,
+                            Apellido_Materno = alumno.Ap_Materno,
+                            Genero = alumno.Genero1.Descripcion,
+                            Region = alumno.Ciudad1.Region1.Descripcion,
+                            Ciudad = alumno.Ciudad1.Descripcion
+                        };
+
+
+            dataGridView1.DataSource = query.ToList();
+            dataGridView1.Refresh();
+        }
+
+        private void btn_consulta5_Click(object sender, EventArgs e)
+        {
+            ProgCEntities bd = new ProgCEntities();
+
+            var query = from alumno in bd.Alumno
+                        where alumno.Ciudad1.Descripcion == "Santiago" && alumno.Genero1.Descripcion == "Masculino" ///Hace referencia a todas las personas que son de genero masculino
+                        select new
+                        {
+
+                            Rut = alumno.Rut,
+                            Nombre = alumno.Nombres,
+                            Apellido_Paterno = alumno.Ap_Paterno,
+                            Apellido_Materno = alumno.Ap_Materno,
+                            Genero = alumno.Genero1.Descripcion,
+                            Region = alumno.Ciudad1.Region1.Descripcion,
+                            Ciudad = alumno.Ciudad1.Descripcion
+                        };
+
+
+            dataGridView1.DataSource = query.ToList();
+            dataGridView1.Refresh();
+        }
+
+        private void btn_consulta6_Click(object sender, EventArgs e)
+        {
+            ProgCEntities bd = new ProgCEntities();
+
+            var query = from alumno in bd.Alumno
+                        where alumno.Ciudad1.Region1.Descripcion == "Region Metropolitana" && alumno.Genero1.Descripcion == "Femenino" && /// todas las personas genero femenino de la region metropolitana-
+                        (alumno.Nombres.StartsWith("F") || alumno.Nombres.StartsWith("K")) // -Que empiezen con F O CON K
+                        select new
+                        {
+
+                            Rut = alumno.Rut,
+                            Nombre = alumno.Nombres,
+                            Apellido_Paterno = alumno.Ap_Paterno,
+                            Apellido_Materno = alumno.Ap_Materno,
+                            Genero = alumno.Genero1.Descripcion,
+                            Region = alumno.Ciudad1.Region1.Descripcion,
+                            Ciudad = alumno.Ciudad1.Descripcion
+                        };
+
+
+            dataGridView1.DataSource = query.ToList();
+            dataGridView1.Refresh();
+        }
+
+        private void btn_consulta7_Click(object sender, EventArgs e)
+        {
+            ProgCEntities bd = new ProgCEntities();
+
+            var query = from alumno in bd.Alumno
+                        from asig in alumno.Asignatura
+                        orderby asig.Descripcion
+                        select new
+                        {
+
+                            Nombre_Asignatura = asig.Descripcion,
+                            Apellido_Paterno = alumno.Ap_Paterno,
+                            Apellido_Materno = alumno.Ap_Materno,
+                            Nombre = alumno.Nombres
+
+                        };
+
+
+            dataGridView1.DataSource = query.ToList();
+            dataGridView1.Refresh();
+        }
+
+        private void btn_consulta8_Click(object sender, EventArgs e)
+        {
+            ProgCEntities bd = new ProgCEntities();
+
+            var query = from alumno in bd.Alumno
+                        from asig in alumno.Asignatura
+                        where asig.Descripcion == "Programacion .net" &&
+                        (alumno.Ap_Paterno.StartsWith("F") || alumno.Ap_Paterno.StartsWith("M") || alumno.Ap_Paterno.StartsWith("O")) // Que estudie programacion.net que su apellido paterno empize con F o con M O con O.
+                        select new
+                        {
+
+                            Nombre_Asignatura = asig.Descripcion,
+                            Apellido_Paterno = alumno.Ap_Paterno,
+                            Apellido_Materno = alumno.Ap_Materno,
+                            Nombre = alumno.Nombres
+
+                        };
+
+
+            dataGridView1.DataSource = query.ToList();
+            dataGridView1.Refresh();
+        }
+
+        private void btn_consulta9_Click(object sender, EventArgs e)
+        {
+            ProgCEntities bd = new ProgCEntities();
+
+            var query = from alumno in bd.Alumno
+                        from asig in alumno.Asignatura
+                        where asig.Descripcion == "Programacion android" && alumno.Ciudad1.Region1.Descripcion == "Region del Maule"  // Que estudie programacion android y que sea de la region del maule
+                        select new
+                        {
+
+                            Nombre_Asignatura = asig.Descripcion,
+                            Apellido_Paterno = alumno.Ap_Paterno,
+                            Apellido_Materno = alumno.Ap_Materno,
+                            Nombre = alumno.Nombres,
+                            Ciudad = alumno.Ciudad1.Descripcion
+
+                        };
+
+
+            dataGridView1.DataSource = query.ToList();
+            dataGridView1.Refresh();
+        }
+
+        private void btn_consulta10_Click(object sender, EventArgs e)
+        {
+            ProgCEntities bd = new ProgCEntities();
+
+            var query = from alumno in bd.Alumno
+                        from asig in alumno.Asignatura
+                        where asig.Descripcion == "Gestion de procesos de negocio" && alumno.Genero1.Descripcion == "Masculino" && alumno.Ciudad1.Region1.Descripcion == "Region Metropolitana"
+                        select new                                                                                                                                                                                                                                                                                                                                                        
+
+                        {
+
+                            Nombre_Asignatura = asig.Descripcion,
+                            Apellido_Paterno = alumno.Ap_Paterno,
+                            Apellido_Materno = alumno.Ap_Materno,
+                            Nombre = alumno.Nombres,
+                            Genero = alumno.Genero1.Descripcion,
+                            Ciudad = alumno.Ciudad1.Descripcion
+
+                        };
+
+
+            dataGridView1.DataSource = query.ToList();
+            dataGridView1.Refresh();
+        }
+    }
